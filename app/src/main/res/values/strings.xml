@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CreditCaculatorApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_addSubject">Add Subject</string>
+    <string name="title_chart">Chart</string>
+
+
+    <string-array name="subject">
+        <item>데이터베이스</item>
+        <item>운영체제</item>
+        <item>선형대수학</item>
+        <item>오픈소스 소프트웨어 실습</item>
+        <item>데이터 구조</item>
+    </string-array>
+
+    <array name="credit">
+        <item>3.0</item>
+        <item>3.0</item>
+        <item>3.0</item>
+        <item>2.0</item>
+        <item>3.0</item>
+    </array>
+
+    <array name="grade">
+        <item>3.0</item>
+        <item>4.5</item>
+        <item>4.5</item>
+        <item>4.0</item>
+        <item>3.5</item>
+    </array>
+</resources>
