@@ -114,7 +114,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:id="@+id/semester"
+                android:id="@+id/semester_title"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
