@@ -27,7 +27,7 @@ public class CreditViewModel extends ViewModel {
         creditData.setValue(resourceProvider.getData());
     }
 
-    public LiveData<List<CreditInfo>> getCreditData() {
+    public MutableLiveData<List<CreditInfo>> getCreditData() {
         return creditData;
     }
 }
