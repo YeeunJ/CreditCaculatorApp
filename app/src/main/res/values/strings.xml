@@ -28,4 +28,12 @@
         <item>4.0</item>
         <item>3.5</item>
     </array>
+
+    <array name="semester">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>2</item>
+        <item>4</item>
+    </array>
 </resources>

@@ -2,6 +2,7 @@ package com.example.creditcaculatorapp;
 
 import android.os.Bundle;
 
+import com.example.creditcaculatorapp.model.ResourceProvider;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ResourceProvider resourceProvider = new ResourceProvider(getApplicationContext());
+        resourceProvider.setData(R.array.subject, R.array.credit, R.array.grade, R.array.semester);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
     }
 
 }

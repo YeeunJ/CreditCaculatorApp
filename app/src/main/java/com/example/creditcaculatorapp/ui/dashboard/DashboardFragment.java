@@ -13,21 +13,27 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.creditcaculatorapp.R;
+import com.example.creditcaculatorapp.model.CreditInfo;
+import com.example.creditcaculatorapp.model.CreditViewModel;
+import com.example.creditcaculatorapp.model.ResourceProvider;
+
+import java.util.List;
 
 public class DashboardFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private CreditViewModel creditViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+        creditViewModel =
+                ViewModelProviders.of(this).get(CreditViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_addsubject, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        creditViewModel.getCreditData().observe(getViewLifecycleOwner(), new Observer<List<CreditInfo>>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onChanged(List<CreditInfo> creditInfos) {
+                textView.setText(creditInfos.size()+" 개의 데이터가 있습니다.");
             }
         });
         return root;

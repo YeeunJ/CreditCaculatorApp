@@ -1,15 +1,16 @@
 package com.example.creditcaculatorapp.model;
 
-public class creditInfo {
+public class CreditInfo {
     private String subject;
     private float credit;
     private float grade;
+    private int semester;
 
-    public creditInfo(String subject, float credit, float grade){
+    public CreditInfo(String subject, float credit, float grade, int semester){
         this.subject = subject;
         this.credit = credit;
         this.grade=grade;
-
+        this.semester=semester;
     }
 
     public String getSubject() {
@@ -23,4 +24,6 @@ public class creditInfo {
     public float getGrade() {
         return grade;
     }
+
+    public int getSemester() { return semester; }
 }
