@@ -56,7 +56,7 @@ public class DashboardFragment extends Fragment {
         creditViewModel.getCreditData().observe(getViewLifecycleOwner(), new Observer<List<CreditInfo>>() {
             @Override
             public void onChanged(List<CreditInfo> creditInfos) {
-                textView.setText(creditInfos.size()+" 개의 데이터가 있습니다.");
+                textView.setText("현재 "+creditInfos.size()+" 개의 데이터가 있습니다.");
             }
         });
         return root;
