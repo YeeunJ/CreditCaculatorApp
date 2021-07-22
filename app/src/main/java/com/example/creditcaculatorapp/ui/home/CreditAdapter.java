@@ -39,15 +39,10 @@ class CreditAdapter extends
 
         @Override
         public void onClick(View view) {
-            // Get the position of the item that was clicked.
             int mPosition = getLayoutPosition();
-            // Use that to access the affected item in mWordList.
+
             CreditInfo element = creditList.get(mPosition);
-            // Change the word in the mWordList.
-            //creditList.set(mPosition, "Clicked! " + creditList.toString());
-            System.out.println(element.toString());
-            // Notify the adapter, that the data has changed so it can
-            // update the RecyclerView to display the data.
+
             mAdapter.notifyDataSetChanged();
         }
     }

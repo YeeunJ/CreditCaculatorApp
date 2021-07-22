@@ -46,9 +46,13 @@ public class NotificationsFragment extends Fragment {
         BarData data = new BarData(getDataSet(creditViewModel.getCreditData().getValue()));
         chart.setData(data);
         Description description = new Description();
-        description.setText("My Chart");
+        description.setText("학기별 평균 평점 차트");
         chart.setDescription(description);
         chart.animateXY(2000, 2000);
+        chart.getAxisLeft().setTextColor(Color.argb(70,255,255,255)); // left y-axis
+        chart.getXAxis().setTextColor(Color.argb(70,255,255,255));
+        chart.getLegend().setTextColor(Color.argb(70,255,255,255));
+        chart.getDescription().setTextColor(Color.argb(70,255,255,255));
         chart.invalidate();
 
         creditViewModel.getCreditData().observe(getViewLifecycleOwner(), new Observer<List<CreditInfo>>() {
@@ -73,15 +77,10 @@ public class NotificationsFragment extends Fragment {
                 }
                 BarDataSet barDataSet1 = new BarDataSet(valueSet1, "학기");
                 barDataSet1.setColors(ColorTemplate.COLORFUL_COLORS);
-
                 dataSets.add(barDataSet1);
 
                 BarData data = new BarData(dataSets);
                 chart.setData(data);
-//                Description description = new Description();
-//                description.setText("My Chart");
-//                chart.setDescription(description);
-//                chart.animateXY(2000, 2000);
                 chart.invalidate();
             }
         });
@@ -105,17 +104,6 @@ public class NotificationsFragment extends Fragment {
 
         dataSets.add(barDataSet1);
         return dataSets;
-    }
-
-    private ArrayList getXAxisValues() {
-        ArrayList xAxis = new ArrayList();
-        xAxis.add("JAN");
-        xAxis.add("FEB");
-        xAxis.add("MAR");
-        xAxis.add("APR");
-        xAxis.add("MAY");
-        xAxis.add("JUN");
-        return xAxis;
     }
 }
 
