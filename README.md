@@ -1,4 +1,4 @@
-# CREDIT CACULATOR APP
+# CREDIT CALCULATOR APP
 
 학점 계산기 애플리케이션 만들기
 
